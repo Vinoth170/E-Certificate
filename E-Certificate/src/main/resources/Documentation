@@ -1,0 +1,12 @@
+E-Certificate project
+
+This project is indented for generating e-certificate using JAVA.
+
+The package named ecertificate contains the classes AlignText, PDF and SendMail.
+
+The class PDF contains the "main" method in which the date for the e-certificate is get from the command line in the format dd-MM-yyyy, if the command line argument is empty then the current date will be given.
+The "main" method instantiate the class called CreatePDF and calls method "ePDF".
+"ePDF" method will store the achievers name and email id through returnable method "getName", which return the name and email address as properties object to the "ePDF" method.
+Then the method createPDF is called which will create the pdf using the resources from the folder "resources" and send it through email using the method called "mail"
+In createdPDF method the class AlignText is instantiated and using the method "alignText" the text for the e-certificate is aligned and using "alignDate" method the date will be aligned.
+Finally using "mail" method in CreatePDF class the SendMail class is instantiated and the mail is send to the receivers.
